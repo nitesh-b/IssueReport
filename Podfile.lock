@@ -1,20 +1,50 @@
 PODS:
   - IQKeyboardManager (6.5.10)
+  - Kingfisher (7.0.0)
+  - Kommunicate (6.7.2):
+    - KommunicateChatUI-iOS-SDK (~> 0.2.5)
+  - KommunicateChatUI-iOS-SDK (0.2.5):
+    - KommunicateChatUI-iOS-SDK/Complete (= 0.2.5)
+  - KommunicateChatUI-iOS-SDK/Complete (0.2.5):
+    - Kingfisher (~> 7.0.0)
+    - KommunicateChatUI-iOS-SDK/RichMessageKit
+    - KommunicateCore-iOS-SDK (~> 1.0.4)
+    - SwipeCellKit (~> 2.7.1)
+  - KommunicateChatUI-iOS-SDK/RichMessageKit (0.2.5)
+  - KommunicateCore-iOS-SDK (1.0.4)
   - SnapKit (5.6.0)
+  - SwipeCellKit (2.7.1)
+  - XMLMapper (2.0.0):
+    - XMLMapper/Core (= 2.0.0)
+  - XMLMapper/Core (2.0.0)
 
 DEPENDENCIES:
   - IQKeyboardManager
+  - Kommunicate
   - SnapKit
+  - XMLMapper
 
 SPEC REPOS:
   trunk:
     - IQKeyboardManager
+    - Kingfisher
+    - Kommunicate
+    - KommunicateChatUI-iOS-SDK
+    - KommunicateCore-iOS-SDK
     - SnapKit
+    - SwipeCellKit
+    - XMLMapper
 
 SPEC CHECKSUMS:
   IQKeyboardManager: 45a1fa55c1a5b02c61ac0fd7fd5b62bb4ad20d97
+  Kingfisher: 5efc54fec3980f92354898532e562cc17f31efb4
+  Kommunicate: cdfea5297f1e5c26c4720d0a335ea034f78474ce
+  KommunicateChatUI-iOS-SDK: 2507026e4630067caea09a1d36404a3fa3c146b7
+  KommunicateCore-iOS-SDK: f4cbf5ee3a11f869d7effaff4270823bb1336991
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
+  SwipeCellKit: 3972254a826da74609926daf59b08d6c72e619ea
+  XMLMapper: 45ff16367092620b0b4adbc5e42dd8db6ebb5e0d
 
-PODFILE CHECKSUM: 124d7ace1b50d0a693a82605e44201902c18ce37
+PODFILE CHECKSUM: 4177719b0b6f36aa8a8016fff15d3cb89bb4533e
 
 COCOAPODS: 1.11.3

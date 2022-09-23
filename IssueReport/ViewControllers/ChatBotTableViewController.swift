@@ -32,6 +32,7 @@ class ChatBotTableViewController: UIViewController, UITableViewDelegate, UITable
             make.height.equalTo(48.0)
         }
         tf.backgroundColor = .white
+        tf.textColor = .black
         return tf
         
     }()

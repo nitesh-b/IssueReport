@@ -19,5 +19,9 @@
 			</array>
 		</dict>
 	</dict>
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string>This permission is required to collect speech information</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Record your voice for TTS </string>
 </dict>
 </plist>

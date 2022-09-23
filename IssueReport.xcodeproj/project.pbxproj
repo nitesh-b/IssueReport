@@ -19,6 +19,8 @@
 		2D033DD128C612070051A614 /* ReceiverTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D033DD028C612070051A614 /* ReceiverTableViewCell.xib */; };
 		2D033DD428C615180051A614 /* MessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D033DD328C615180051A614 /* MessageModel.swift */; };
 		2D033DD828C618990051A614 /* SenderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D033DD628C618990051A614 /* SenderTableViewCell.xib */; };
+		2D674C9628D008AB000D1311 /* XMLParserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D674C9528D008AB000D1311 /* XMLParserViewController.swift */; };
+		2D68BC7028DC785A00F034FB /* VoiceProcessor in Frameworks */ = {isa = PBXBuildFile; productRef = 2D68BC6F28DC785A00F034FB /* VoiceProcessor */; };
 		4241F634814C6905F873A7A4 /* Pods_IssueReport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 386901FE7F76D3D84BE8D1FC /* Pods_IssueReport.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +39,7 @@
 		2D033DD028C612070051A614 /* ReceiverTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReceiverTableViewCell.xib; sourceTree = "<group>"; };
 		2D033DD328C615180051A614 /* MessageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageModel.swift; sourceTree = "<group>"; };
 		2D033DD628C618990051A614 /* SenderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SenderTableViewCell.xib; sourceTree = "<group>"; };
+		2D674C9528D008AB000D1311 /* XMLParserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLParserViewController.swift; sourceTree = "<group>"; };
 		386901FE7F76D3D84BE8D1FC /* Pods_IssueReport.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IssueReport.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDC3E82C7C6767B9BFB41DE8 /* Pods-IssueReport.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IssueReport.release.xcconfig"; path = "Target Support Files/Pods-IssueReport/Pods-IssueReport.release.xcconfig"; sourceTree = "<group>"; };
 		D01D743455EB50C2A16A7D57 /* Pods-IssueReport.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IssueReport.debug.xcconfig"; path = "Target Support Files/Pods-IssueReport/Pods-IssueReport.debug.xcconfig"; sourceTree = "<group>"; };
@@ -47,6 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D68BC7028DC785A00F034FB /* VoiceProcessor in Frameworks */,
 				4241F634814C6905F873A7A4 /* Pods_IssueReport.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -84,16 +88,15 @@
 		2D033DA828C5B8660051A614 /* IssueReport */ = {
 			isa = PBXGroup;
 			children = (
+				2D674C9428D00887000D1311 /* ViewControllers */,
 				2D033DA928C5B8660051A614 /* AppDelegate.swift */,
 				2D033DB228C5B8680051A614 /* Assets.xcassets */,
-				2D033DBD28C5D1800051A614 /* ChatBotTableViewController.swift */,
 				2D033DC128C5D2BD0051A614 /* ChatCell */,
 				2D033DB728C5B8680051A614 /* Info.plist */,
 				2D033DB428C5B8680051A614 /* LaunchScreen.storyboard */,
 				2D033DD228C614FC0051A614 /* model */,
 				2D033DBF28C5D1ED0051A614 /* NavController.swift */,
 				2D033DAB28C5B8660051A614 /* SceneDelegate.swift */,
-				2D033DAD28C5B8660051A614 /* ViewController.swift */,
 			);
 			path = IssueReport;
 			sourceTree = "<group>";
@@ -115,6 +118,16 @@
 				2D033DD328C615180051A614 /* MessageModel.swift */,
 			);
 			path = model;
+			sourceTree = "<group>";
+		};
+		2D674C9428D00887000D1311 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				2D033DBD28C5D1800051A614 /* ChatBotTableViewController.swift */,
+				2D033DAD28C5B8660051A614 /* ViewController.swift */,
+				2D674C9528D008AB000D1311 /* XMLParserViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		63ABC697EC1E85C09BD5FE11 /* Frameworks */ = {
@@ -143,6 +156,9 @@
 			dependencies = (
 			);
 			name = IssueReport;
+			packageProductDependencies = (
+				2D68BC6F28DC785A00F034FB /* VoiceProcessor */,
+			);
 			productName = IssueReport;
 			productReference = 2D033DA628C5B8660051A614 /* IssueReport.app */;
 			productType = "com.apple.product-type.application";
@@ -171,6 +187,9 @@
 				Base,
 			);
 			mainGroup = 2D033D9D28C5B8660051A614;
+			packageReferences = (
+				2D68BC6E28DC785A00F034FB /* XCRemoteSwiftPackageReference "VoiceProcessor" */,
+			);
 			productRefGroup = 2D033DA728C5B8660051A614 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -244,6 +263,7 @@
 				2D033DCC28C5D4090051A614 /* ReceiverTableViewCell.swift in Sources */,
 				2D033DC028C5D1ED0051A614 /* NavController.swift in Sources */,
 				2D033DAE28C5B8660051A614 /* ViewController.swift in Sources */,
+				2D674C9628D008AB000D1311 /* XMLParserViewController.swift in Sources */,
 				2D033DD428C615180051A614 /* MessageModel.swift in Sources */,
 				2D033DAA28C5B8660051A614 /* AppDelegate.swift in Sources */,
 				2D033DC628C5D3740051A614 /* SenderTableViewCell.swift in Sources */,
@@ -458,6 +478,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2D68BC6E28DC785A00F034FB /* XCRemoteSwiftPackageReference "VoiceProcessor" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/nitesh-b/VoiceProcessor";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2D68BC6F28DC785A00F034FB /* VoiceProcessor */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2D68BC6E28DC785A00F034FB /* XCRemoteSwiftPackageReference "VoiceProcessor" */;
+			productName = VoiceProcessor;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2D033D9E28C5B8660051A614 /* Project object */;
 }
